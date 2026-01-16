@@ -1,0 +1,113 @@
+/* --- LAYOUT UTAMA --- */
+.app-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* --- SIDEBAR --- */
+.sidebar {
+  width: 260px;
+  background-color: var(--bg-sidebar);
+  color: var(--text-primary);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-right: 1px solid #333;
+  position: fixed; /* Agar sidebar diam saat discroll */
+  height: 100vh;
+  left: 0;
+  top: 0;
+}
+
+.sidebar-header {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--accent-color);
+  margin-bottom: 40px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.sidebar-menu ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sidebar-menu a {
+  display: block;
+  padding: 12px 15px;
+  border-radius: var(--border-radius);
+  color: var(--text-secondary);
+  transition: 0.3s;
+  font-size: 0.95rem;
+}
+
+.sidebar-menu a:hover,
+.sidebar-menu a.active {
+  background-color: var(--accent-color);
+  color: white;
+  box-shadow: 0 4px 10px rgba(61, 145, 255, 0.3);
+}
+
+/* --- MAIN CONTENT WRAPPER --- */
+.main-content {
+  margin-left: 260px; /* Memberi ruang untuk sidebar */
+  width: calc(100% - 260px);
+  padding: 30px;
+}
+
+/* --- NAVBAR ATAS --- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--bg-card);
+  padding: 15px 25px;
+  border-radius: var(--border-radius);
+  margin-bottom: 30px;
+  box-shadow: var(--shadow-card);
+}
+
+.user-info {
+  font-size: 0.9rem;
+  color: var(--text-primary);
+}
+
+.user-role {
+  font-size: 0.8rem;
+  background-color: #333;
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin-left: 10px;
+  color: var(--accent-color);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* --- CARDS DASHBOARD --- */
+.dashboard-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background-color: var(--bg-card);
+  padding: 25px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-card);
+  border: 1px solid #333;
+}
+
+.card h3 {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 10px;
+}
+
+.card .number {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+}

@@ -1,0 +1,71 @@
+.profile-card {
+  background-color: var(--bg-card);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-card);
+  padding: 40px;
+  max-width: 800px;
+  margin: 0 auto; /* Tengah secara horizontal */
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  border: 1px solid #333;
+}
+
+.profile-img-container {
+  flex-shrink: 0;
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--accent-color);
+  box-shadow: 0 0 20px rgba(61, 145, 255, 0.4);
+}
+
+.profile-info {
+  flex-grow: 1;
+}
+
+.profile-info h3 {
+  font-size: 1.8rem;
+  color: white;
+  margin-bottom: 5px;
+}
+
+.profile-info .jurusan {
+  color: var(--accent-color);
+  font-weight: 600;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.data-row {
+  display: flex;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 8px;
+}
+
+.data-label {
+  width: 120px;
+  color: #888;
+  font-weight: 500;
+}
+
+.data-value {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* Responsif untuk HP */
+@media (max-width: 768px) {
+  .profile-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  .data-row {
+    justify-content: space-between;
+  }
+}

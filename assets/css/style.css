@@ -1,0 +1,193 @@
+/* Import Google Font (Opsional tapi disarankan biar modern) */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+
+:root {
+  /* Palet Warna Dark Mode */
+  --bg-body: #121212;
+  --bg-card: #1e1e1e;
+  --bg-sidebar: #2c2c2c;
+  --text-primary: #e0e0e0;
+  --text-secondary: #b0b0b0;
+  --accent-color: #3d91ff; /* Biru modern */
+  --accent-hover: #1e6dd0;
+  --danger-color: #ff4d4d;
+  --success-color: #00c853;
+
+  /* Ukuran & Shadow */
+  --border-radius: 10px;
+  --shadow-card: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: var(--bg-body);
+  color: var(--text-primary);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* --- STYLE KHUSUS HALAMAN LOGIN --- */
+.login-body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #0f0f0f 0%, #222222 100%);
+}
+
+.login-container {
+  background-color: var(--bg-card);
+  padding: 40px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-card);
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid #333;
+}
+
+.login-header h2 {
+  color: var(--accent-color);
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.login-header p {
+  color: var(--text-secondary);
+  text-align: center;
+  font-size: 0.9rem;
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--bg-body);
+  border: 1px solid #444;
+  border-radius: 6px;
+  color: white;
+  outline: none;
+  transition: 0.3s;
+}
+
+.form-group input:focus {
+  border-color: var(--accent-color);
+}
+
+.btn-login {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 1rem;
+}
+
+.btn-login:hover {
+  background-color: var(--accent-hover);
+}
+
+.alert-error {
+  background-color: rgba(255, 77, 77, 0.2);
+  color: var(--danger-color);
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  text-align: center;
+  border: 1px solid var(--danger-color);
+  font-size: 0.9rem;
+}
+
+.login-footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.8rem;
+  color: #555;
+}
+
+/* --- TABLE STYLE --- */
+.btn-primary {
+  background-color: var(--accent-color);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  transition: 0.3s;
+}
+.btn-primary:hover {
+  background-color: var(--accent-hover);
+}
+
+.table-container {
+  overflow-x: auto;
+  background-color: var(--bg-card);
+  padding: 20px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-card);
+}
+
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: var(--text-primary);
+}
+
+.custom-table th,
+.custom-table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #333;
+}
+
+.custom-table th {
+  background-color: #252525;
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+.custom-table tr:hover {
+  background-color: #2a2a2a;
+}
+
+/* Tombol Aksi Kecil */
+.btn-small {
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  margin-right: 5px;
+}
+.btn-edit {
+  background-color: #ffc107;
+  color: #000;
+}
+.btn-delete {
+  background-color: var(--danger-color);
+  color: white;
+}
