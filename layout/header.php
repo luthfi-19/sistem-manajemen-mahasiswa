@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dashboard.css">
     <link rel="stylesheet" href="assets/css/profile.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
 
@@ -35,9 +36,9 @@
                     </li>
                 <?php endif; ?>
 
-                <li>
-                    <a href="logout.php" style="color: var(--danger-color);">Logout</a>
-                </li>
+                    <li>
+                        <a href="logout.php" class="btn-logout" style="color: var(--danger-color);">Logout</a>
+                    </li>
             </ul>
         </nav>
     </aside>

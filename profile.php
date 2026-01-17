@@ -30,9 +30,19 @@ $data = mysqli_fetch_assoc($result);
 
     <div class="profile-card">
         <div class="profile-img-container">
-            <img src="https://ui-avatars.com/api/?name=<?= $data['nama']; ?>&background=random&size=200" alt="Foto Profil" class="profile-img">
+            <?php 
+                // Cek apakah file fotonya benar-benar ada di folder?
+                $path_foto = "assets/img/" . $data['foto'];
+                
+                if ($data['foto'] != "default.jpg" && file_exists($path_foto)) {
+                    // Tampilkan foto asli user
+                    echo '<img src="'.$path_foto.'" alt="Foto Profil" class="profile-img">';
+                } else {
+                    // Jika tidak ada foto / masih default, pakai avatar kartun
+                    echo '<img src="https://ui-avatars.com/api/?name='.$data['nama'].'&background=random&size=200" alt="Foto Default" class="profile-img">';
+                }
+            ?>
         </div>
-
         <div class="profile-info">
             <h3><?= $data['nama']; ?></h3>
             <span class="jurusan"><?= $data['jurusan']; ?></span>
@@ -50,6 +60,16 @@ $data = mysqli_fetch_assoc($result);
             <div class="data-row">
                 <span class="data-label">Status</span>
                 <span class="data-value" style="color: var(--success-color);">: Mahasiswa Aktif</span>
+            </div>
+
+            <div class="action-buttons">
+                <a href="edit_profil.php" class="btn-action btn-edit">
+                    ✏️ Edit Profil
+                </a>
+                
+                <a href="cetak_ktm.php" target="_blank" class="btn-action btn-print">
+                    🖨️ Cetak KTM
+                </a>
             </div>
         </div>
     </div>

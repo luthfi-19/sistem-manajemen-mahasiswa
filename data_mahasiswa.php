@@ -8,6 +8,14 @@ if (!isset($_SESSION['status']) || $_SESSION['role'] != 'admin') {
 
 include 'layout/header.php';
 include 'config/database.php';
+
+if (isset($_SESSION['notifikasi'])) {
+    // Kita taruh pesan di elemen tersembunyi biar dibaca JS
+    echo '<div class="flash-data" data-pesan="'.$_SESSION['notifikasi'].'"></div>';
+    
+    // Hapus session biar pesannya gak muncul terus saat di-refresh
+    unset($_SESSION['notifikasi']); 
+}
 ?>
 
 <div class="content-body">

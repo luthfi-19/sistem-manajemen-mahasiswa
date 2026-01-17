@@ -11,7 +11,7 @@ include 'layout/header.php';
     <h2>Tambah Data Mahasiswa</h2>
     
     <div class="form-container">
-        <form action="php_logic/create.php" method="POST">
+        <form action="php_logic/create.php" method="POST" enctype="multipart/form-data">
             
             <div class="form-group">
                 <label>NIM (Nomor Induk Mahasiswa)</label>
@@ -39,6 +39,12 @@ include 'layout/header.php';
             </div>
 
             <div class="form-group">
+                <label>Upload Foto Profil</label>
+                <input type="file" name="foto" accept=".jpg, .jpeg, .png" style="width: 100%; padding: 10px; background: #333; border: 1px solid #444; border-radius: 6px; color: #fff;">
+                <small style="color: #aaa; font-style: italic;">*Format: JPG/PNG, Maksimal 2MB</small>
+            </div>
+
+            <div class="form-group">
                 <label>Email</label>
                 <input type="email" name="email" required placeholder="email@kampus.id">
             </div>
@@ -59,7 +65,6 @@ include 'layout/header.php';
 </div>
 
 <style>
-/* CSS Tambahan Langsung Disini agar cepat */
 .form-container {
     background-color: var(--bg-card);
     padding: 30px;
@@ -67,10 +72,12 @@ include 'layout/header.php';
     margin-top: 20px;
     max-width: 600px;
 }
-select {
+select, input {
     width: 100%; padding: 12px; background: var(--bg-body); 
     border: 1px solid #444; color: white; border-radius: 6px;
+    outline: none;
 }
+input:focus, select:focus { border-color: var(--accent-color); }
 </style>
 
 <?php include 'layout/footer.php'; ?>

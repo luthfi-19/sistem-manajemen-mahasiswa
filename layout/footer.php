@@ -1,3 +1,5 @@
 </main>
-    </div> </body>
+    </div> <script src="assets/js/script.js"></script>
+
+</body>
 </html>

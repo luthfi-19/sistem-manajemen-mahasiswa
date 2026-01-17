@@ -69,3 +69,50 @@
     justify-content: space-between;
   }
 }
+
+/* --- UPDATE STYLE TOMBOL --- */
+.action-buttons {
+  margin-top: 25px;
+  display: flex;
+  gap: 15px; /* Jarak antar tombol */
+  align-items: center;
+}
+
+.btn-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px; /* Tombol lebih tebal */
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600; /* Huruf agak tebal */
+  text-decoration: none;
+  transition: all 0.3s ease;
+  gap: 10px; /* Jarak ikon ke teks */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+}
+
+/* Tombol Edit (Kuning Emas biar kelihatan "Edit") */
+.btn-edit {
+  background-color: #f1c40f;
+  color: #2c3e50; /* Teks gelap biar terbaca */
+  border: 1px solid #f39c12;
+}
+
+.btn-edit:hover {
+  background-color: #f39c12;
+  transform: translateY(-2px); /* Efek naik dikit pas di-hover */
+}
+
+/* Tombol Cetak (Biru/Ungu Keren) */
+.btn-print {
+  background-color: #6c5ce7;
+  color: white;
+  border: 1px solid #5d48d6;
+}
+
+.btn-print:hover {
+  background-color: #5d48d6;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(108, 92, 231, 0.4); /* Glow ungu */
+}
